@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#E6E6E6"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <LinearLayout
+                android:layout_weight="9"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/gold"
+                    android:textSize="25sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#666666"
+                    android:paddingLeft="10dp"
+                    android:text="$ 1000" />
+                <ImageView
+                    android:id="@+id/tank_img"
+                    android:src="@drawable/tank_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <com.example.zengwei.zwtank.CustomView.RippleLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/Effort"
+                    style="@style/pertainUseStyle"
+                    android:text="光荣成就"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:id="@+id/Piece"
+                    style="@style/pertainUseStyle"
+                    android:text="战车碎片"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:id="@+id/Annals"
+                    style="@style/pertainUseStyle"
+                    android:text="历史关卡"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </com.example.zengwei.zwtank.CustomView.RippleLayout>
+        </LinearLayout>
+
+        <com.example.zengwei.zwtank.CustomView.RippleLayout
+            android:id="@+id/ripple"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+            <TextView
+                android:id="@+id/Nextlevel"
+                style="@style/useStyle"
+                android:text="下一关"
+                android:background="@drawable/back"
+                android:textColor="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/Upgrade"
+                style="@style/useStyle"
+                android:text="战车升级"
+                android:background="@drawable/back2"
+                android:textColor="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/Role"
+                style="@style/useStyle"
+                android:text="任务"
+                android:background="@drawable/back1"
+                android:textColor="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/Shopping"
+                style="@style/useStyle"
+                android:text="商城"
+                android:background="@drawable/back4"
+                android:textColor="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.example.zengwei.zwtank.CustomView.RippleLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="30dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v4.view.ViewPager
+                android:id="@+id/thisViewPage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </android.support.v4.view.ViewPager>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -21,16 +21,29 @@ public class BaseApplication extends LitePalApplication{
         }else{
             //初始化金币
             GoldCheckpoint goldCheckpoint=new GoldCheckpoint();
-            goldCheckpoint.setGold(1000);
+            goldCheckpoint.setGold(10000);
             goldCheckpoint.setCheckpoint(1);
             goldCheckpoint.save();
             //初始坦克
             TankCar tankCar=new TankCar();
-            tankCar.setTankCar("T0001");
+            tankCar.setTankCar("T-01");
             tankCar.setHit(5);
+            tankCar.setHitLevel(1);
             tankCar.setRecovery(1);
+            tankCar.setRecoveryLevel(1);
             tankCar.setRate(3);
+            tankCar.setRateLevel(1);
             tankCar.save();
+
+            TankCar tankCar1=new TankCar();
+            tankCar1.setTankCar("异兽蠃鱼");
+            tankCar1.setHit(8);
+            tankCar1.setHitLevel(1);
+            tankCar1.setRecovery(4);
+            tankCar1.setRecoveryLevel(1);
+            tankCar1.setRate(2);
+            tankCar1.setRateLevel(1);
+            tankCar1.save();
             //初始碎片
             Piece piece=new Piece();
             piece.setPieceid("T0002");

@@ -19,4 +19,21 @@
         <item name="android:gravity">center</item>
         <item name="android:background">@drawable/pertain</item>
     </style>
+
+    <!-- 战车升级-->
+    <style name="roleTextStyle">
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">#2B2B2B</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+    </style>
+    <style name="rolelinerStyle">
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@drawable/role_use_layout</item>
+    </style>
 </resources>

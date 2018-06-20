@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/ShoppingName"
+        android:layout_weight="5"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="名字" />
+
+    <ImageView
+        android:id="@+id/ShoppingImage"
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/tank_1" />
+    <TextView
+        android:id="@+id/ShoppingGold"
+        android:layout_weight="5"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:background="@drawable/role_gold"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="名字" />
+</LinearLayout>

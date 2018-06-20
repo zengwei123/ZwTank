@@ -96,20 +96,54 @@
                 android:layout_height="wrap_content" />
         </com.example.zengwei.zwtank.CustomView.RippleLayout>
     </LinearLayout>
-
+    <RelativeLayout
+        android:clickable="true"
+        android:visibility="gone"
+        android:id="@+id/backColor"
+        android:background="#aaE4E4E4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></RelativeLayout>
     <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/Page"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="30dp">
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <android.support.v4.view.ViewPager
+            <RelativeLayout
+                android:id="@+id/dialog"
+                android:background="#495A80"
+                android:paddingLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <TextView
+                    android:id="@+id/dialogClose"
+                    android:paddingRight="10dp"
+                    android:text="\uf01f"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/dialogTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@+id/dialogClose"
+                    android:layout_toRightOf="@+id/dialogClose"
+                    android:gravity="center"
+                    android:text=""
+                    android:textSize="20sp" />
+            </RelativeLayout>
+            <com.example.zengwei.zwtank.Util.MainViewPage
                 android:id="@+id/thisViewPage"
+                android:layout_below="@+id/dialog"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-            </android.support.v4.view.ViewPager>
-        </LinearLayout>
+            </com.example.zengwei.zwtank.Util.MainViewPage>
+        </RelativeLayout>
     </LinearLayout>
 </RelativeLayout>

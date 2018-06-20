@@ -9,8 +9,11 @@ import org.litepal.crud.DataSupport;
 public class TankCar extends DataSupport {
     private String tankCar;  //车辆编号
     private int hit;     //攻击
+    private int hitLevel;
     private int recovery;   //防御
+    private int recoveryLevel;
     private int rate;   //速度
+    private int rateLevel;
 
     public String getTankCar() {
         return tankCar;
@@ -28,6 +31,14 @@ public class TankCar extends DataSupport {
         this.hit = hit;
     }
 
+    public int getHitLevel() {
+        return hitLevel;
+    }
+
+    public void setHitLevel(int hitLevel) {
+        this.hitLevel = hitLevel;
+    }
+
     public int getRecovery() {
         return recovery;
     }
@@ -36,11 +47,27 @@ public class TankCar extends DataSupport {
         this.recovery = recovery;
     }
 
+    public int getRecoveryLevel() {
+        return recoveryLevel;
+    }
+
+    public void setRecoveryLevel(int recoveryLevel) {
+        this.recoveryLevel = recoveryLevel;
+    }
+
     public int getRate() {
         return rate;
     }
 
     public void setRate(int rate) {
         this.rate = rate;
+    }
+
+    public int getRateLevel() {
+        return rateLevel;
+    }
+
+    public void setRateLevel(int rateLevel) {
+        this.rateLevel = rateLevel;
     }
 }

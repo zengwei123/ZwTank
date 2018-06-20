@@ -1,4 +1,4 @@
-package com.example.zengwei.zwtank.Util;
+package com.example.zengwei.zwtank.Util.Adatper;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

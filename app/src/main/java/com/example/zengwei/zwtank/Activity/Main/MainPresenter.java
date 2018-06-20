@@ -3,6 +3,7 @@ package com.example.zengwei.zwtank.Activity.Main;
 import android.support.v4.app.Fragment;
 
 import com.example.zengwei.zwtank.Activity.Role_F.RoleFragment;
+import com.example.zengwei.zwtank.Activity.Shopping_F.ShoppingFragment;
 import com.example.zengwei.zwtank.Activity.Upgrade_F.UpgradeFragment;
 import com.example.zengwei.zwtank.Base.BasePresenter;
 import com.example.zengwei.zwtank.Dao.GoldCheckpointDao;
@@ -38,6 +39,7 @@ public class MainPresenter implements BasePresenter{
         list=new ArrayList<>();
         list.add(new RoleFragment());
         list.add(new UpgradeFragment());
+        list.add(new ShoppingFragment());
         mainView.setFragment(list);
     }
 }

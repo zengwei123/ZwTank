@@ -5,6 +5,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -21,11 +22,13 @@ public class RippleLayout extends LinearLayout {
     private int x=0,y=0,r=0,cirvleR=0;
     int left,top,right,bottom;
     private Paint linePaint;
+    private thisRun run;
     public RippleLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
         linePaint=new Paint();
         linePaint.setStyle(Paint.Style.FILL );
         linePaint.setColor(Color.parseColor("#AA666666"));
+        run=new thisRun();
     }
 
     @Override
@@ -74,6 +77,9 @@ public class RippleLayout extends LinearLayout {
             }else{
                 downview=null;
             }
+            run.event = ev;
+            postDelayed(run, 500);
+            return true;
         }
         return  super.dispatchTouchEvent(ev);
     }
@@ -110,6 +116,17 @@ public class RippleLayout extends LinearLayout {
             return true;
         }else{
             return false;
+        }
+    }
+
+    private class thisRun implements Runnable {
+        MotionEvent event;
+        @Override
+        public void run() {
+            if(downview!=null){
+                downview.dispatchTouchEvent(event);
+            }
+            Log.d("zengs","2");
         }
     }
 }
